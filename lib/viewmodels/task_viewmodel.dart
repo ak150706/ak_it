@@ -21,6 +21,11 @@ class TaskViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void updateTask(int index, Task task) {
+    _tasks[index] = task;
+    notifyListeners();
+  }
+
   List<Task> get todayTasks {
     final now = DateTime.now();
     return _tasks

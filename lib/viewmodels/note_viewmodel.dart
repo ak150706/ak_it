@@ -15,4 +15,9 @@ class NoteViewModel extends ChangeNotifier {
     _notes.removeAt(index);
     notifyListeners();
   }
+
+  void updateNote(int index, Note note) {
+    _notes[index] = note;
+    notifyListeners();
+  }
 }
